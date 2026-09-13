@@ -382,7 +382,15 @@
                 <label for="photo">
                     📷 Upload Your Photo
                 </label>
-
+                <!-- Fix photo label accessibility -->
+            <label for="photo">📷 Upload Your Photo</label>
+            
+            <!-- Add max file size validation in JavaScript -->
+            if (file.size > 1 * 1024 * 1024) {
+                alert("File size must be less than 1MB");
+                return;
+            }
+                     
                 <input
                     type="file"
                     id="photo"
@@ -720,14 +728,17 @@
                 id="consent"
                 required
             >
-
+            <!-- Improve consent label association -->
+            <div class="consent">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">I confirm...</label>
+            </div>
             <label for="consent">
                 I confirm that the information provided is correct and
                 I agree that it may be used for the purpose of suggesting
                 suitable gift ideas.
             </label>
         </div>
-
 
         <button type="submit" class="submit-btn">
             🎁 Get My Gift Recommendation Number
