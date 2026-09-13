@@ -11,4 +11,7 @@ h1 {
 button {
     padding: 10px 20px;
     cursor: pointer;
+/* Green to Blue */
+background: linear-gradient(135deg, #10b981 0%, #0284c7 100%);
+
 }
